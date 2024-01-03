@@ -16,7 +16,6 @@ AWS CDK Implementation of a [REST Api with MTLS](https://docs.aws.amazon.com/api
     ## add to .projenrc.ts this : packageManager: javascript.NodePackageManager.PNPM,
     ## add to .projenrc.ts this : import { javascript, awscdk } from 'projen';
     npx projen
-    rm package-lock.json
     rm yarn.lock
     rm -Rf node_modules/
     rm -Rf ./git
@@ -25,10 +24,11 @@ AWS CDK Implementation of a [REST Api with MTLS](https://docs.aws.amazon.com/api
     mv api-stack cdk-rest-api-with-mutual-tls
 ```
 
-4) [add turbo](https://turbo.build/repo/docs/getting-started/add-to-project) to the stack via [turbo.json](turbo.json)
+4) [add turbo](https://turbo.build/repo/docs/getting-started/add-to-project) to the stack via [api-stack/turbo.json](api-stack/turbo.json)
 
 5) run a build 
 ```bash
+    cd api-stack
     turbo build
 ```
 
