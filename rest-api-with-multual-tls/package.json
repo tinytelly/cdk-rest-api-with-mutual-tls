@@ -1,5 +1,5 @@
 {
-  "name": "turbo",
+  "name": "rest-api-with-multual-tls",
   "private": true,
   "scripts": {
     "build": "turbo build",
