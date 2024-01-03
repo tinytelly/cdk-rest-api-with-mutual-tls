@@ -6,6 +6,5 @@ AWS CDK Implementation of a [REST Api with MTLS](https://docs.aws.amazon.com/api
 2) create a [devcontainer in github](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-a-predefined-dev-container-configuration) to work on that contains the features of pnpm, turbo, aws cdk and projen, once created [rebuild the codespace container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace)
 
 ### TODO
-1) set up turbo + pnpm for repo
-2) use projen to create stack for API
-3) create github workflow to build on commits.
+1) use projen to create stack for API
+2) create github workflow to build on commits.
