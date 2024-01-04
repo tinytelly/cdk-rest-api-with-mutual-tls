@@ -4,7 +4,7 @@ AWS CDK Implementation of a [REST Api with MTLS](https://docs.aws.amazon.com/api
 ### Steps used to create this repo from scratch (for education purposes)
 1) create a public repo in github
 
-2) create a [devcontainer in github](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-a-predefined-dev-container-configuration) to work on that contains the features of pnpm, turbo, aws cdk and projen, once created [rebuild the codespace container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace)
+2) create a [devcontainer in github](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-a-predefined-dev-container-configuration) which creates a github codespace to perform your work on.  The codespace will support [pnpm](https://pnpm.io/), [turbo](https://turbo.build/), [aws cdk](https://aws.amazon.com/cdk/) and [projen](https://github.com/projen/projen). Once created [rebuild the codespace container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace)
 
 3) create a aws cdk stack using projen
 ```bash
@@ -12,9 +12,13 @@ AWS CDK Implementation of a [REST Api with MTLS](https://docs.aws.amazon.com/api
     mkdir api-stack
     cd api-stack/
     npx projen new awscdk-app-ts --github=false
-    ## add to .projenrc.ts this : project.package.setScript('build', 'npx projen && npx projen build');
-    ## add to .projenrc.ts this : packageManager: javascript.NodePackageManager.PNPM,
-    ## add to .projenrc.ts this : import { javascript, awscdk } from 'projen';
+    ## add to .projenrc.ts these lines
+        import { javascript, awscdk } from 'projen';
+        ...
+        packageManager: javascript.NodePackageManager.PNPM,
+        ...
+        project.package.setScript('build', 'npx projen && npx projen build');
+        
     npx projen
     rm yarn.lock
     rm -Rf node_modules/
