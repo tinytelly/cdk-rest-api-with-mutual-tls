@@ -12,7 +12,7 @@
  ```
 
  ```typescript   
-    ## add to .projenrc.ts these lines
+    //add to .projenrc.ts these lines
         import { javascript, awscdk } from 'projen';
         ...
         packageManager: javascript.NodePackageManager.PNPM,
