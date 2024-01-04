@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4.0.1
         with:
-          node-version: 20
+          node-version: 21
           check-latest: true
 
       - name: Install pnpm
@@ -55,4 +55,4 @@ jobs:
         uses: dtinth/setup-github-actions-caching-for-turbo@v1.1.0
      
       - name: Build stacktick 
-        run: cd api-stack && pnpm run build
+        run: cd api-stack && turbo build
