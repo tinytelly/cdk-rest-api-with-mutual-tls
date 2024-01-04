@@ -38,4 +38,8 @@
 ```
 
 6) create a github workflow by creating this [file](.github/workflows/ci.yml)
-   - this uses caching in github leveraging turbo via this [action](https://github.com//dtinth/setup-github-actions-caching-for-turbo) 
+   - this uses caching in github leveraging turbo via this [action](https://github.com//dtinth/setup-github-actions-caching-for-turbo)
+  
+### TODO
+- build a basic stack in cdk to do a rest api
+- add mtls to that api stack
