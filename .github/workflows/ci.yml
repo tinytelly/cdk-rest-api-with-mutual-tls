@@ -55,4 +55,4 @@ jobs:
         uses: dtinth/setup-github-actions-caching-for-turbo@v1.1.0
      
       - name: Build stacktick 
-        run: cd api-stack && turbo run build
+        run: cd api-stack && turbo build
