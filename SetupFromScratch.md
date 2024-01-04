@@ -13,11 +13,11 @@
 
  ```typescript   
     //add to .projenrc.ts these lines
-        import { javascript, awscdk } from 'projen';
-        ...
-        packageManager: javascript.NodePackageManager.PNPM,
-        ...
-        project.package.setScript('build', 'npx projen && npx projen build');
+    import { javascript, awscdk } from 'projen';
+    ...
+    packageManager: javascript.NodePackageManager.PNPM,
+    ...
+    project.package.setScript('build', 'npx projen && npx projen build');
  ```
  ```bash       
     npx projen
