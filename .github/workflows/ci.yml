@@ -49,10 +49,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: cd api-stack && pnpm install                    
+        run: cd api-stack && pnpm install turbo --global && pnpm install                    
 
       - name: Setup local Turbo cache
         uses: dtinth/setup-github-actions-caching-for-turbo@v1.1.0
      
       - name: Build stacktick 
-        run: cd api-stack && turbo build
+        run: cd api-stack && turbo run build
