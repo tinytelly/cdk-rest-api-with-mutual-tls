@@ -9,13 +9,17 @@
     mkdir api-stack
     cd api-stack/
     npx projen new awscdk-app-ts --github=false
+ ```
+
+ ```typescript   
     ## add to .projenrc.ts these lines
         import { javascript, awscdk } from 'projen';
         ...
         packageManager: javascript.NodePackageManager.PNPM,
         ...
         project.package.setScript('build', 'npx projen && npx projen build');
-        
+ ```
+ ```bash       
     npx projen
     rm yarn.lock
     rm -Rf node_modules/
