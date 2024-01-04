@@ -37,5 +37,5 @@
     turbo build
 ```
 
-### TODO
-1) create github workflow to build on commits.
+6) create a github workflow by creating this [file](.github/workflows/ci.yml)
+   - this uses caching in github leveraging turbo via this [action](https://github.com//dtinth/setup-github-actions-caching-for-turbo) 
