@@ -1,11 +1,11 @@
 ### Steps used to create this repo from scratch
 1) create a public repo in github
 
-2) create a [devcontainer in github](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-a-predefined-dev-container-configuration) which creates a github codespace to perform your work on.  The codespace will support [pnpm](https://pnpm.io/), [turbo](https://turbo.build/), [aws cdk](https://aws.amazon.com/cdk/) and [projen](https://github.com/projen/projen). Once created [rebuild the codespace container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace)
+2) create a [devcontainer in github](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-a-predefined-dev-container-configuration) which creates a github codespace to perform your work on.  The codespace will support [pnpm](https://pnpm.io/), [turbo](https://turbo.build/), [aws cdk](https://aws.amazon.com/cdk/) and [projen](https://github.com/projen/projen). Once created [rebuild the codespace container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#applying-configuration-changes-to-a-codespace).
 
-3) create a aws cdk stack using projen
+3) create an aws cdk stack using projen
 ```bash
-    cd ../
+    cd ../. # it is easier to create this outside of the repo that is already associated with git, and then copy the folder back into the repo.
     mkdir api-stack
     cd api-stack/
     npx projen new awscdk-app-ts --github=false
